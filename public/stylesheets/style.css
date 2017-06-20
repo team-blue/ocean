@@ -1,0 +1,165 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  background: rgb(254,244,234);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.top-banner {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  height: 48px;
+  width: 100%;
+  background: rgb(0,100,155);
+  border-bottom: 2px solid rgb(0,70,100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-banner-text {
+  color: white;
+  font-size: 24pt;
+  /*text-decoration: underline;*/
+  border-bottom: 1px solid white;
+}
+
+
+
+.search-container {
+  clear: both;
+  position: fixed;
+  float: left;
+  width: 100%;
+  height: 50px;
+  top: 0;
+} .search-prompt-container {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 100%;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} .search {
+  margin: 0 auto;
+  position: relative;
+  float: left;
+  background: white;
+  width: 90%;
+  height: 45%;
+  border-radius: 10px;
+  z-index: 100;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-main-gutter {
+  position: relative;
+  float: left;
+  width: 500px;
+  height: 100%;
+}
+
+
+
+
+.main-body {
+  position: fixed;
+  float: left;
+  top: 50px;
+  height: calc(100% - 50px);
+  width: 100%;
+  min-width: 700px;
+  /*background: red;*/
+}
+
+.gutter {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height: 100%;
+  width: calc((100% - 700px) / 2);
+}
+
+/* the artist info */
+.artists {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 200px;
+  height: 100%;
+  /*background: pink;*/
+} .artists-body {
+  /*position: relative;*/
+  /*float: left;*/
+  overflow: auto;
+  margin: 0 auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 98%;
+  height: 98%;
+} .artist {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-stroke-width: 1.5px;
+  font-size: 20pt;
+  color: rgb(254,244,234);
+  text-shadow: 5px 5px 15px rgb(0,100,155);
+  box-shadow: 1px 1px 1px rgba(0,100,155,.2);
+} .artist:hover {
+  border: 2px solid rgb(0,100,155);
+}
+.artists-fade-upper {
+  position: fixed;
+  top: 50;
+  background: linear-gradient(to top, transparent, rgb(254,244,234));
+  width: 200px;
+  height: 50px;
+}
+/*.artists-fade-lower {
+  position: fixed;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgb(254,244,234));
+  width: 200px;
+  height: 100px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* the content stream */
+.stream {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 500px;
+  height: 100%;
+  background: white;
+}
