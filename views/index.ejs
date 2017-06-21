@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script language="javascript" type="text/javascript" src="/javascripts/lib/jquery.js"></script>
   </head>
   <body>
 
@@ -156,7 +157,13 @@
           </div>
         </div>
       </div>
-      <div class="stream"></div>
+      <div class="stream">
+        <div class="stream-banner"></div>
+        <div class="stream-wave">
+          <div class="stream-wave-content"></div>
+          <div class="stream-wave-rank"></div>
+        </div>
+      </div>
       <div class="gutter"></div>
     </div>
 
@@ -172,6 +179,15 @@
       <div class="gutter"></div>
     </div>
 
+
+
+
+
+
+
+    <script language="javascript" type="text/javascript">
+      $('.stream-wave-content').load("/waves/frank-ocean.ejs");
+    </script>
 
 
   </body>
