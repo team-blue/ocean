@@ -20,37 +20,37 @@
         <div class="artists-body">
           <div class="artists-fade-upper"></div>
           <div class="artists-fade-lower"></div>
-          <a href="#"  class="artist"
+          <a href="#" class="artist" id="frank-ocean"
             style="
               background-image: url('/images/frank-swim.jpg');
               background-size: 100%;
             ">Frank Ocean
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist" id="beyonce"
             style="
               background-image: url('/images/beyonce.png');
               background-size: 100%;
             ">Beyonce
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist" id="justin-bieber"
             style="
               background-image: url('/images/justin-bieber.png');
               background-size: 100%;
             ">Justin Bieber
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist" id="kanye-west"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">Kanye West
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist" id="coldplay"
             style="
               background-image: url('/images/coldplay.png');
               background-size: 100%;
             ">Coldplay
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist" id="partynextdoor"
             style="
               background-image: url('/images/partynextdoor.jpg');
               background-size: 100%;
@@ -66,91 +66,91 @@
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
             ">someone
           </a>
-          <a href="#"  class="artist"
+          <a href="#" class="artist"
             style="
               background-image: url('/images/kanye-west.jpg');
               background-size: 100%;
@@ -162,7 +162,10 @@
         <!-- <div class="stream-banner"style="background-image: url('/images/frank-swim.jpg');background-size: 100%;"> -->
         <div class="stream-banner">
           <div class="stream-banner-artist-name">
-            FRANK OCEAN
+            <div class="empty-div" id="frank-ocean">
+              <img src="/images/arrow.png" width="30px" height="auto" style="transform:translateY(6px) rotate(90deg);">
+              FRANK OCEAN
+            </div>
           </div>
         </div>
         <div class="stream-wave">
@@ -196,6 +199,46 @@
     <script language="javascript" type="text/javascript">
       $('.stream-wave-content').load("/waves/frank-ocean.ejs");
     </script>
+
+    <script language="javascript" type="text/javascript">
+      $('.artist').click(function(event) {
+        $.ajax(this.href, {
+          success: function() {
+            $( ".stream-wave-content" ).load("/waves/" + event.target.id + ".ejs");
+            $( ".stream-banner-artist-name" ).load("/waves/names.ejs #" + event.target.id);
+          }
+        });
+      });
+
+      function unland() {
+        document.getElementById('land').style.backgroundColor = "transparent";
+        document.getElementById('land').style.background = "linear-gradient(to top, rgb(4,51,135), transparent, transparent)";
+        document.getElementById('land').style.top = "100%";
+        document.getElementById('land-film').style.zIndex = "-500";
+        document.getElementById('land-title-container').style.zIndex = "-1000";
+        document.getElementById('land-title').style.zIndex = "-1001";
+        document.getElementById('current-1').style.height = "0";
+        document.getElementById('current-2').style.height = "0";
+        document.getElementById('current-3').style.height = "0";
+      }
+    </script>
+
+
+    <div id="land"></div>
+    <div id="land-title-container">
+      <div id="land-title">the ocean</div>
+    </div>
+    <a href="#" id="land-film" onclick="unland();"></a>
+
+    <div id="current-1">
+      <img width="100%" height="100%" src="/images/ocean-layer-1.png">
+    </div>
+    <div id="current-2">
+      <img width="100%" height="100%" src="/images/ocean-layer-2.png">
+    </div>
+    <div id="current-3">
+      <img width="100%" height="100%" src="/images/ocean-layer-3.png">
+    </div>
 
 
   </body>

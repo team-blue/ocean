@@ -1,7 +1,15 @@
+
+@font-face {
+  font-family: Satellite;
+  src: url("/assets/MrEavesSanOT/Emigre/MrEavesSanOTReg.otf") format("opentype");
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  /*font-family: 'Josefin Sans', sans-serif;*/
+  font-family: 'Satellite', serif;
+  -webkit-text-stroke-width: 0.5px;
   width: 100%;
   height: 100%;
   background: rgb(254,244,234);
@@ -80,7 +88,6 @@ a {
   height: calc(100% - 50px);
   width: 100%;
   min-width: 700px;
-  /*background: red;*/
 }
 
 .gutter {
@@ -117,8 +124,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-text-stroke-width: 1.5px;
   font-size: 20pt;
+  text-decoration: none;
   color: rgb(254,244,234);
   text-shadow: 5px 5px 15px rgb(0,100,155);
   box-shadow: 1px 1px 1px rgba(0,100,155,.2);
@@ -150,11 +157,59 @@ a {
 
 
 
+.empty-div {
+  position:relative;
+  float:left;
+  width:100%;
+  height:100%;
+}
 
 
 
+#land {
+  clear: both;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(4,51,135);
+  height: 100%;
+  z-index: 100;
+  transition: 5s;
+}
 
+#land-title-container {
+  clear: both;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  transition: 5s;
+}
 
+#land-title {
+  position: relative;
+  letter-spacing: 3.5px;
+  float: left;
+  font-size: 48pt;
+  color: white;
+  z-index: 500;
+  transition: 5s;
+}
+#land-film {
+  clear: both;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+}
 
 
 /* the content stream */
@@ -163,7 +218,7 @@ a {
   float: left;
   overflow: hidden;
   width: 490px;
-  border-left: 3px solid rgba(0,100,155,1);
+  border-left: 3px solid rgb(0,70,100);
   border-top: 4px solid rgb(0,70,100);
   height: calc(100% - 4px);
 }
@@ -176,6 +231,9 @@ a {
   height: calc(75px - 16px);
   margin-top: 8px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } .stream-banner-artist-name {
   font-size: 18pt;
   width: 100%;
@@ -190,7 +248,7 @@ a {
   float: left;
   overflow: scroll;
   width: calc(100% - 8px);
-  height: calc(100% - 75px);
+  height: calc(100% - 75px - 4px);
 }
 .stream-wave-content {
   position: relative;
@@ -206,7 +264,7 @@ a {
   margin-left: 10px;
   height: 100px;
   border: 1px solid rgb(0,100,155);
-  border-radius: 2px;
+  border-radius: 3px;
 } .stream-wave-content-item-media {
   position: relative;
   float: left;
@@ -313,9 +371,9 @@ a {
   background-image: url('/images/flag.png');
   background-repeat: no-repeat;
   background-size: 50%;
-  transform: translate(25%, 30%);
+  transform: translate(25%, 33%);
 } .rank-voter-flag:hover {
-  background: rgba(0,100,155,.05);
+  background: rgba(255,10,55,.05);
 }
 
 
@@ -343,7 +401,7 @@ a {
   margin-left: 10px;
   border: 1px solid rgb(0,100,155);
   border-radius: 2px;
-  height: 410px;
+  height: 600px;
   width: auto;
   /*width: auto;*/
 }
@@ -376,7 +434,83 @@ a {
   top: 75px;
   overflow: hidden;
   width: 490px;
-  height: 30px;
-} .stream-clone-fade {
+  height: 15px;
+}
 
+
+
+
+
+
+
+
+
+
+
+
+@keyframes current1 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -10%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes current2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -10%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes current3 {
+  0% {
+    left: -5%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: -5%;
+  }
+}
+#current-1 {
+  clear: both;
+  position: fixed;
+  overflow: hidden;
+  width: 125%;
+  height: 125%;
+  z-index: 200;
+  bottom: -10px;
+  animation: current1 10s infinite;
+  transition: 5s;
+}
+#current-2 {
+  clear: both;
+  position: fixed;
+  overflow: hidden;
+  width: 125%;
+  height: 125%;
+  z-index: 200;
+  bottom: -10px;
+  animation: current2 4.5s infinite;
+  transition: 5s;
+}
+#current-3 {
+  clear: both;
+  position: fixed;
+  overflow: hidden;
+  width: 125%;
+  height: 125%;
+  z-index: 200;
+  bottom: -10px;
+  animation: current3 7s infinite;
+  transition: 5s;
 }
