@@ -212,8 +212,9 @@
 
       function unland() {
         document.getElementById('land').style.backgroundColor = "transparent";
-        document.getElementById('land').style.background = "linear-gradient(to top, rgb(4,51,135), transparent, transparent)";
-        document.getElementById('land').style.top = "100%";
+        // document.getElementById('land').style.background = "linear-gradient(to top, rgb(4,51,135), transparent, transparent)";
+        document.getElementById('land').style.zIndex = -1;
+        // document.getElementById('land').style.top = "100%";
         document.getElementById('land-film').style.zIndex = "-500";
         document.getElementById('land-title-container').style.zIndex = "-1000";
         document.getElementById('land-title').style.zIndex = "-1001";
