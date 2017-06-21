@@ -28,8 +28,7 @@ a {
 }
 .top-banner-text {
   color: white;
-  font-size: 24pt;
-  /*text-decoration: underline;*/
+  font-size: 16pt;
   border-bottom: 1px solid white;
 }
 
@@ -55,7 +54,7 @@ a {
   position: relative;
   float: left;
   background: white;
-  width: 90%;
+  width: 200px;
   height: 45%;
   border-radius: 10px;
   z-index: 100;
@@ -98,11 +97,9 @@ a {
   float: left;
   overflow: hidden;
   width: 200px;
-  height: 100%;
-  /*background: pink;*/
+  border-top: 4px solid rgb(0,70,100);
+  height: calc(100% - 4px);
 } .artists-body {
-  /*position: relative;*/
-  /*float: left;*/
   overflow: auto;
   margin: 0 auto;
   margin-top: 4px;
@@ -166,9 +163,9 @@ a {
   float: left;
   overflow: hidden;
   width: 490px;
-  border-left: 3px solid rgba(0,100,155,.25);
-  height: 100%;
-  /*background: white;*/
+  border-left: 3px solid rgba(0,100,155,1);
+  border-top: 4px solid rgb(0,70,100);
+  height: calc(100% - 4px);
 }
 .stream-banner {
   position: relative;
@@ -176,12 +173,11 @@ a {
   overflow: hidden;
   width: calc(100% - 8px);
   margin-left: 8px;
-  border-left: 8px solid rgb(0,100,155);
   height: calc(75px - 16px);
   margin-top: 8px;
   margin-bottom: 8px;
 } .stream-banner-artist-name {
-  font-size: 36pt;
+  font-size: 18pt;
   width: 100%;
   height: 100%;
   display: flex;
@@ -193,7 +189,7 @@ a {
   position: relative;
   float: left;
   overflow: scroll;
-  width: 100%;
+  width: calc(100% - 8px);
   height: calc(100% - 75px);
 }
 .stream-wave-content {
@@ -209,6 +205,8 @@ a {
   margin-bottom: 50px;
   margin-left: 10px;
   height: 100px;
+  border: 1px solid rgb(0,100,155);
+  border-radius: 2px;
 } .stream-wave-content-item-media {
   position: relative;
   float: left;
@@ -225,10 +223,8 @@ a {
   float: left;
   margin: 0 auto;
   height: 100%;
-
-  width: calc(100% - 8px);
+  width: 100%;
   border-left: 1px solid rgb(0,100,155);
-  margin-left: 8px;
 } .rank-box-header {
   position: relative;
   float: left;
@@ -338,4 +334,49 @@ a {
   margin-bottom: 50px;
   margin-left: 10px;
   height: 250px;
+  border: 1px solid rgb(0,100,155);
+  border-radius: 2px;
+}
+.stream-wave-content-item-PIC {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  border: 1px solid rgb(0,100,155);
+  border-radius: 2px;
+  height: 410px;
+  width: auto;
+  /*width: auto;*/
+}
+
+
+
+
+
+
+
+/*.clone {
+  clear: both;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}*/
+.stream-clone-left-margin {
+  clear: both;
+  position: relative;
+  float: left;
+  width: calc((100% - 700px) / 2);
+  height: 10px;
+  /*background: green;*/
+}
+.stream-clone {
+  position: relative;
+  background: linear-gradient(to bottom, rgb(254,244,234), transparent);
+  float: left;
+  left: 208px;
+  top: 75px;
+  overflow: hidden;
+  width: 490px;
+  height: 30px;
+} .stream-clone-fade {
+
 }
