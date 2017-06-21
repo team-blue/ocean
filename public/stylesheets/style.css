@@ -10,6 +10,10 @@ body {
   display: none;
 }
 
+a {
+  margin: 0;
+  padding: 0;
+}
 .top-banner {
   position: relative;
   overflow: hidden;
@@ -170,9 +174,19 @@ body {
   position: relative;
   float: left;
   overflow: hidden;
+  width: calc(100% - 8px);
+  margin-left: 8px;
+  border-left: 8px solid rgb(0,100,155);
+  height: calc(75px - 16px);
+  margin-top: 8px;
+  margin-bottom: 8px;
+} .stream-banner-artist-name {
+  font-size: 36pt;
   width: 100%;
-  height: 75px;
-  /*background: rgb(0,200,255);*/
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify: middle
 }
 
 .stream-wave {
@@ -206,40 +220,116 @@ body {
   float: left;
   width: calc(100% - 350px);
   height: 100%;
-  /*background: white;*/
 } .rank-box {
   position: relative;
   float: left;
-  width: calc(100% - 4px);
   margin: 0 auto;
-  margin-left: 4px;
-  width: 100%;
   height: 100%;
-  /*background: red;*/
+
+  width: calc(100% - 8px);
+  border-left: 1px solid rgb(0,100,155);
+  margin-left: 8px;
 } .rank-box-header {
   position: relative;
   float: left;
-  width: 100%;
+  width: calc(100% - 8px);
+  margin-left: 8px;
   height: 40px;
-  background: blue;
-} .rank-box-voter-container {
+} .rank-box-header-creator {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+} .rank-box-header-platform {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+
+.rank-box-voter-container {
   position: relative;
   float: left;
   width: 100%;
   height: calc(100% - 40px);
-  background: white;
 } .rank-box-voter-actual {
   position: relative;
   float: left;
   width: 100%;
-  height: 60px;
-  /*background: green;*/
-} .rank-box-voter-bottom-gutter {
+  height: 58px;
+  border-top: 2px solid rgba(0,100,155,.25);
+} .rank-voter-up {
+  position: relative;
+  float: left;
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} .rank-up-img {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/arrow.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: translateY(16%);
+} .rank-voter-up:hover {
+  background: rgba(0,100,155,.05);
+}
+
+
+ .rank-voter-down {
+  position: relative;
+  float: left;
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} .rank-down-img {
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/arrow.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: rotate(180deg) translateY(15%);
+} .rank-voter-down:hover {
+  background: rgba(0,100,155,.05);
+}
+
+ .rank-voter-flag {
+  position: relative;
+  float: left;
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} .rank-flag-img {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/flag.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  transform: translate(25%, 30%);
+} .rank-voter-flag:hover {
+  background: rgba(0,100,155,.05);
+}
+
+
+
+
+ .rank-box-voter-bottom-gutter {
   position: relative;
   float: left;
   width: 100%;
   height: calc(100% - 60px);
-  /*background: gray;*/
 }
 
 
