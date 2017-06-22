@@ -29,6 +29,7 @@ a {
   height: 48px;
   width: 100%;
   background: rgb(0,100,155);
+  /*background-color: rgb(4,51,135);*/
   border-bottom: 2px solid rgb(0,70,100);
   display: flex;
   justify-content: center;
@@ -38,8 +39,29 @@ a {
   color: white;
   font-size: 16pt;
   border-bottom: 1px solid white;
+  z-index: 2;
 }
 
+
+.logo-container {
+  clear: both;
+  position: fixed;
+  left: 10px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} .logo {
+  z-index: 3;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  background-image: url('/images/team-blue-logo.jpg');
+  background-size: 100%;
+}
 
 
 .search-container {
@@ -65,7 +87,7 @@ a {
   width: 200px;
   height: 45%;
   border-radius: 10px;
-  z-index: 100;
+  z-index: 2;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -74,7 +96,7 @@ a {
 .search-main-gutter {
   position: relative;
   float: left;
-  width: 500px;
+  width: 600px;
   height: 100%;
 }
 
@@ -87,7 +109,8 @@ a {
   top: 50px;
   height: calc(100% - 50px);
   width: 100%;
-  min-width: 700px;
+  min-width: 800px;
+  background: rgb(254,244,234);
 }
 
 .gutter {
@@ -95,7 +118,7 @@ a {
   float: left;
   overflow: hidden;
   height: 100%;
-  width: calc((100% - 700px) / 2);
+  width: calc((100% - 800px) / 2);
 }
 
 /* the artist info */
@@ -104,8 +127,8 @@ a {
   float: left;
   overflow: hidden;
   width: 200px;
-  border-top: 4px solid rgb(0,70,100);
-  height: calc(100% - 4px);
+  /*border-top: 4px solid rgb(0,70,100);*/
+  height: calc(100% - 0px);
 } .artists-body {
   overflow: auto;
   margin: 0 auto;
@@ -169,12 +192,14 @@ a {
 #land {
   clear: both;
   position: fixed;
-  top: 0;
+  top: -900%;
   left: 0;
   width: 100%;
-  background-color: rgb(4,51,135);
-  height: 100%;
-  z-index: 100;
+  background: rgb(0,100,155);
+
+  /*background-color: rgb(4,51,135);*/
+  height: 1000%;
+  z-index: 10;
   transition: 5s;
 }
 
@@ -188,7 +213,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 500;
+  z-index: 11;
   transition: 5s;
 }
 
@@ -197,19 +222,52 @@ a {
   letter-spacing: 3.5px;
   float: left;
   font-size: 48pt;
+  text-align: center;
+  width: 100%;
   color: white;
-  z-index: 500;
+  z-index: 22;
   transition: 5s;
 }
 #land-film {
   clear: both;
   position: fixed;
+  text-align: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 3000;
+  z-index: 21;
 }
+
+@keyframes newanim {
+  0% {
+    color: rgb(255,255,255,0.0);
+  }
+  50% {
+    color: rgb(255,255,255,0.0);
+  }
+  100% {
+    color: rgb(255,255,255,1.0);
+  }
+}
+
+
+#land-delayed-welcome {
+  /* transition 2.5 transparent to 0.5px off-white: */
+  transition: 30s;
+  width: 100%;
+  font-size: 18pt;
+  /*z-index: 22;*/
+  color: rgba(0,200,255,1);
+  -webkit-text-stroke-width: 0.25px;
+  animation: newanim 11s no-repeat;
+}
+
+
+
+
+
+
 
 
 /* the content stream */
@@ -217,21 +275,21 @@ a {
   position: relative;
   float: left;
   overflow: hidden;
-  width: 490px;
+  width: 600px;
   border-left: 3px solid rgb(0,70,100);
-  border-top: 4px solid rgb(0,70,100);
-  height: calc(100% - 4px);
+  /*border-top: 4px solid rgb(0,70,100);*/
+  height: calc(100% - 0px);
   z-index: 1;
 }
 .stream-banner {
   position: relative;
   float: left;
   overflow: hidden;
-  width: calc(100% - 8px);
-  margin-left: 8px;
-  height: calc(75px - 16px);
+  width: calc(100% - 28px);
+  margin-left: 28px;
+  height: calc(75px - 8px);
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,42 +306,77 @@ a {
 .stream-wave {
   position: relative;
   float: left;
-  overflow: scroll;
-  width: calc(100% - 8px);
+  overflow: hidden;
+  margin-left: 0px;
+  width: 100%;
   height: calc(100% - 75px - 4px);
 }
 .stream-wave-content {
   position: relative;
+  overflow: scroll;
   float: left;
   width: 100%;
-  height: calc(100% - 75px);
+  height: 100%;
 }
+
+
+
+
 
 
 .stream-wave-content-item {
   margin-top: 20px;
   margin-bottom: 50px;
-  margin-left: 10px;
+  margin-left: 30px;
   height: 100px;
   border: 1px solid rgb(0,100,155);
   border-radius: 3px;
-} .stream-wave-content-item-media {
+}
+.stream-wave-content-item-VID {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  height: 250px;
+  border: 1px solid rgb(0,100,155);
+  border-radius: 2px;
+}
+.stream-wave-content-item-PIC {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  border: 1px solid rgb(0,100,155);
+  border-radius: 2px;
+  height: 600px;
+  width: auto;
+}
+
+
+ .stream-wave-content-item-media {
   position: relative;
   float: left;
   height: 100%;
-  width: 350px;
+  width: 440px;
 }
+
+
+
+
+
+
+
+/*voter box*/
 .stream-wave-content-item-rank {
   position: relative;
   float: left;
-  width: calc(100% - 350px);
+  width: calc(100% - 440px);
   height: 100%;
 } .rank-box {
   position: relative;
   float: left;
   margin: 0 auto;
   height: 100%;
-  width: 100%;
+  width: (100% - 4px);
+  border-right: 4px solid rgb(0,100,155);
   border-left: 1px solid rgb(0,100,155);
 } .rank-box-header {
   position: relative;
@@ -389,24 +482,6 @@ a {
 }
 
 
-.stream-wave-content-item-VID {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-left: 10px;
-  height: 250px;
-  border: 1px solid rgb(0,100,155);
-  border-radius: 2px;
-}
-.stream-wave-content-item-PIC {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-left: 10px;
-  border: 1px solid rgb(0,100,155);
-  border-radius: 2px;
-  height: 600px;
-  width: auto;
-  /*width: auto;*/
-}
 
 
 
@@ -414,29 +489,23 @@ a {
 
 
 
-/*.clone {
-  clear: both;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}*/
 .stream-clone-left-margin {
   clear: both;
   position: relative;
   float: left;
-  width: calc((100% - 700px) / 2);
+  width: calc((100% - 800px) / 2);
   height: 10px;
-  /*background: green;*/
 }
 .stream-clone {
   position: relative;
-  background: linear-gradient(to bottom, rgb(254,244,234), transparent);
+  /*background: linear-gradient(to bottom, rgb(254,244,234), transparent);*/
+  /*background: linear-gradient(to bottom, rgb(0,100,155), transparent);*/
   float: left;
-  left: 208px;
-  top: 75px;
+  left: 231px;
+  top: 74px;
   overflow: hidden;
-  width: 490px;
-  height: 15px;
+  width: 572px;
+  height: 4px;
 }
 
 
@@ -453,63 +522,61 @@ a {
 @keyframes current1 {
   0% {
     left: 0;
+    bottom: 0%;
+  }
+  25% {
+    left: -20%;
   }
   50% {
-    left: -10%;
+    left: 0;
+    bottom: -10%;
+  }
+  75% {
+    left: -20%;
   }
   100% {
     left: 0;
-  }
-}
-@keyframes current2 {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: -10%;
-  }
-  100% {
-    left: 0;
+    bottom: 0%;
   }
 }
 @keyframes current3 {
   0% {
-    left: -5%;
-    bottom: -5%;
+    left: -15%;
+    bottom: -15%;
   }
   10% {
     bottom: 0;
   }
   20% {
-    bottom: -5%;
+    bottom: -15%;
   }
   30% {
     bottom: 0;
   }
   40% {
-    bottom: -5%;
+    bottom: -15%;
   }
   50% {
     left: 0;
     bottom: 0;
   }
   60% {
-    bottom: -5%;
+    bottom: -15%;
   }
   70% {
-    left: -5%;
+    left: -15%;
     bottom: 0;
   }
   80% {
-    bottom: -5%;
+    bottom: -15%;
   }
   90% {
     left: 0;
     bottom: 0;
   }
   100% {
-    left: -5%;
-    bottom: -5%;
+    left: -15%;
+    bottom: -15%;
   }
 }
 #current-1 {
@@ -518,10 +585,10 @@ a {
   overflow: hidden;
   width: 125%;
   height: 125%;
-  z-index: 200;
+  z-index: 20;
   bottom: -10px;
-  animation: current1 10s infinite;
-  transition: 5s;
+  animation: current1 11s infinite;
+  transition: 7s;
 }
 #current-2 {
   clear: both;
@@ -529,10 +596,10 @@ a {
   overflow: hidden;
   width: 125%;
   height: 125%;
-  z-index: 200;
+  z-index: 20;
   bottom: -10px;
-  animation: current2 4.5s infinite;
-  transition: 5s;
+  animation: current1 12.5s infinite;
+  transition: 7s;
 }
 #current-3 {
   clear: both;
@@ -540,8 +607,8 @@ a {
   overflow: hidden;
   width: 125%;
   height: 125%;
-  z-index: 200;
+  z-index: 20;
   bottom: -10px;
-  animation: current3 25s infinite;
-  transition: 5s;
+  animation: current3 18s infinite;
+  transition: 7s;
 }

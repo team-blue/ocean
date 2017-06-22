@@ -60,116 +60,36 @@
 
 
 
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
-          <a href="#" class="artist"
-            style="
-              background-image: url('/images/kanye-west.jpg');
-              background-size: 100%;
-            ">someone
-          </a>
+
+
         </div>
       </div>
       <div class="stream">
         <!-- <div class="stream-banner"style="background-image: url('/images/frank-swim.jpg');background-size: 100%;"> -->
         <div class="stream-banner">
-          <div class="stream-banner-artist-name">
-            <div class="empty-div" id="frank-ocean">
-              <img src="/images/arrow.png" width="30px" height="auto" style="transform:translateY(6px) rotate(90deg);">
-              FRANK OCEAN
-            </div>
-          </div>
+          <div class="stream-banner-artist-name"></div>
         </div>
         <div class="stream-wave">
-          <div class="stream-wave-content"></div>
+          <div class="stream-wave-content">
+            <div style="
+              position: relative;
+              float: left;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            ">
+              <div style="
+                font-size:18pt;
+                color: navy;
+                width: 80%;
+                margin: 0 auto;
+              ">
+                Select an artist to begin browsing and voting on your favorite content!
+              </div>
+            </div>
+          </div>
           <div class="stream-wave-rank"></div>
         </div>
       </div>
@@ -194,12 +114,6 @@
     <div class="stream-clone-left-margin"></div>
     <div class="stream-clone"></div>
 
-
-
-    <script language="javascript" type="text/javascript">
-      $('.stream-wave-content').load("/waves/frank-ocean.ejs");
-    </script>
-
     <script language="javascript" type="text/javascript">
       $('.artist').click(function(event) {
         $.ajax(this.href, {
@@ -212,22 +126,39 @@
 
       function unland() {
         document.getElementById('land').style.backgroundColor = "transparent";
-        // document.getElementById('land').style.background = "linear-gradient(to top, rgb(4,51,135), transparent, transparent)";
-        document.getElementById('land').style.zIndex = -1;
-        // document.getElementById('land').style.top = "100%";
-        document.getElementById('land-film').style.zIndex = "-500";
-        document.getElementById('land-title-container').style.zIndex = "-1000";
-        document.getElementById('land-title').style.zIndex = "-1001";
+        document.getElementById('land').style.background = "linear-gradient(to top, rgb(0,100,155), transparent, transparent)";
+        document.getElementById('land').style.height = "0";
+        document.getElementById('land').style.top = "100%";
+        document.getElementById('land-film').style.zIndex = "-5";
+        document.getElementById('land-title-container').style.zIndex = "-10";
+        document.getElementById('land-title').style.zIndex = -11;
         document.getElementById('current-1').style.height = "0";
         document.getElementById('current-2').style.height = "0";
         document.getElementById('current-3').style.height = "0";
+
       }
+
     </script>
+
+    <div class="logo-container">
+      <div class="logo"></div>
+    </div>
 
 
     <div id="land"></div>
     <div id="land-title-container">
-      <div id="land-title">the ocean</div>
+      <div id="land-title">
+        <div id="land-delayed-welcome">
+          welcome to
+        </div>
+        <div>
+          the ocean
+        </div>
+        <hr>
+        <div id="land-delayed-welcome">
+          click anywhere to begin swimming
+        </div>
+      </div>
     </div>
     <a href="#" id="land-film" onclick="unland();"></a>
 
