@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prepare": "browserify -r mysql > public/javascripts/bundle.js",
+    "prepare": "browserify mysql > bundle.js",
     "start": "node ./bin/www"
   },
   "dependencies": {

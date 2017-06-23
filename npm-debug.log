@@ -1,0 +1,43 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'prepare' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 verbose run-script [ 'prepare' ]
+5 info lifecycle ocean@0.0.0~prepare: ocean@0.0.0
+6 verbose lifecycle ocean@0.0.0~prepare: unsafe-perm in lifecycle true
+7 verbose lifecycle ocean@0.0.0~prepare: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Jeffery/omi-summer-2017/protos/ocean/node_modules/.bin:/usr/local/bin:/usr/lib:/usr/include:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/opt/llvm/bin:/usr/local/Cellar/sip/4.19/lib/python3.6/site-packages/sipdistutils.py:/usr/local/Cellar/pyqt5/5.7.1_1/share/sip/Qt5/QtCore:/Users/Jeffery/.rvm/gems/ruby-2.3.3/bin:/Users/Jeffery/.rvm/gems/ruby-2.3.3@global/bin:/Users/Jeffery/.rvm/rubies/ruby-2.3.3/bin:/usr/lib:/usr/include:/usr/local/opt/llvm/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:Applications/clojure:/Library/TeX/texbin:/Users/Jeffery/bin:/Users/Jeffery/.rvm/bin
+8 verbose lifecycle ocean@0.0.0~prepare: CWD: /Users/Jeffery/omi-summer-2017/protos/ocean
+9 silly lifecycle ocean@0.0.0~prepare: Args: [ '-c', 'browserify mysql > bundle.js' ]
+10 silly lifecycle ocean@0.0.0~prepare: Returned: code: 1  signal: null
+11 info lifecycle ocean@0.0.0~prepare: Failed to exec prepare script
+12 verbose stack Error: ocean@0.0.0 prepare: `browserify mysql > bundle.js`
+12 verbose stack Exit status 1
+12 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+12 verbose stack     at emitTwo (events.js:106:13)
+12 verbose stack     at EventEmitter.emit (events.js:191:7)
+12 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+12 verbose stack     at emitTwo (events.js:106:13)
+12 verbose stack     at ChildProcess.emit (events.js:191:7)
+12 verbose stack     at maybeClose (internal/child_process.js:891:16)
+12 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+13 verbose pkgid ocean@0.0.0
+14 verbose cwd /Users/Jeffery/omi-summer-2017/protos/ocean
+15 error Darwin 16.4.0
+16 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "prepare"
+17 error node v6.11.0
+18 error npm  v3.10.10
+19 error code ELIFECYCLE
+20 error ocean@0.0.0 prepare: `browserify mysql > bundle.js`
+20 error Exit status 1
+21 error Failed at the ocean@0.0.0 prepare script 'browserify mysql > bundle.js'.
+21 error Make sure you have the latest version of node.js and npm installed.
+21 error If you do, this is most likely a problem with the ocean package,
+21 error not with npm itself.
+21 error Tell the author that this fails on your system:
+21 error     browserify mysql > bundle.js
+21 error You can get information on how to open an issue for this project with:
+21 error     npm bugs ocean
+21 error Or if that isn't available, you can get their info via:
+21 error     npm owner ls ocean
+21 error There is likely additional logging output above.
+22 verbose exit [ 1, true ]

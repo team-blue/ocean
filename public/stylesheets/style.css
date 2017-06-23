@@ -200,7 +200,7 @@ a {
   /*background-color: rgb(4,51,135);*/
   height: 1000%;
   z-index: 10;
-  transition: 5s;
+  transition: 2.5s;
 }
 
 #land-title-container {
@@ -214,7 +214,7 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 11;
-  transition: 5s;
+  transition: 2.5s;
 }
 
 #land-title {
@@ -226,7 +226,7 @@ a {
   width: 100%;
   color: white;
   z-index: 22;
-  transition: 5s;
+  transition: 2.5s;
 }
 #land-film {
   clear: both;
